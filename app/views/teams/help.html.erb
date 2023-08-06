@@ -1,0 +1,58 @@
+<h1>Help Page</h1>
+<div class="help-div">
+  <h2>Team Details</h2>
+  <p><b>Team Name</b> - The assigned name to the team.</p>
+  <% if current_user.is_admin %>
+    <p><b>Team Code</b> - Provide this code to students prior to signup, and instruct them to enter the code into the 
+      'Team/admin code' field upon signup so they are added to the appropriate team.</p>
+    <p><b>Team Members</b> - List of team members. Buttons are provided to remove the user from the team.</p>
+  <% end %>
+  <p><b>Team Members</b> - List of team members. </p>
+</div>
+<div class="help-div">
+  <h2>Team's Individual Feedback</h2>
+  <p><b>Average Rating of Period</b> - Displays average rating, on a scale of 1 to 10, of submitted feedback in given period.</p>
+  <p><b>Urgency/Intervention Level</b> - This displays the overall urgency of the team's feedback and the necessary 
+                                            intervention that is required from the instructor. <br>
+      <ul>
+        <li><u>Low</u> means that all members have categorized their feedback as "low". 
+        The team is progressing well and instructor intervention is not needed at this time.</li>
+        <li><u>Medium</u> means that at least one member on the team has categorized their feedback 
+        as "medium", and no member has categorized their feedback as "high". 
+        Instructor intervention is requested as time permits.</li>
+        <li><u>High</u> means that at least one member on the team has categorized their feedback 
+        as "high". Instructor intervention is required ASAP.</li>
+        <li><u>No Feedback</u> means that not all team members have submitted their feedback for the week.
+        This will automatically populate as "medium" after the due date has passed and not all team members 
+        have submitted their feedback. Team members not submitting their feedback on time indicates the team needs some intervention.</li>
+      </ul>
+    </p>
+    <p><b>Colour Coded System</b> - This reflects the team's overall urgency/intervention level. <br>
+      <ul>
+        <li>A <u>green</u> circle means that the average rating is >6 and the urgency is low, or if the average rating is >8 and the urgency is medium.</li>
+        <li>A <u>yellow</u> circle means that the average rating is (6-8] and the urgency is medium.</li>
+        <li>A <u>red</u> circle means that the average rating is <=6 or if the urgency is high.</li>
+        <li>A <u>blank</u> circle means that not all team members have submitted their feedback for the week. 
+        The circle will automatically turn yellow after the due date has passed and not all team members 
+        have submitted their feedback. Team members not submitting their feedback on time indicates the 
+        team needs some intervention.</li>
+      </ul>
+</ul>
+    <p><b>Average Rating (Out of 10)</b> - This rating reflects the team's overall health and is determined using team members’ responses to the feedback questions.</p>
+    <p><b>Other Ratings </b> - These ratings are used to rate specific aspects of the team's health. Each specific rating is rated from a scale of 0 to 4.<br> 
+    <p>0 - Strongly Disagree, 1 - Disagree, 2 - Neutral, 3 - Agree, 4 - Strongly Agree</p>
+      <ul>
+        <li>Everyone in the group is contributing equally.</li>
+        <li>Everyone in the group is attending all meetings (unless they have an excused absence).</li>
+        <li>The group treats me with respect and provides constructive criticism for my work when needed.</li>
+        <li>My group members take the time to share their knowledge and assist other members of group when needed.</li>
+      </ul>
+
+  <% if current_user.is_admin %>
+    <p><b>Student's Name</b> - Name of student who submitted feedback.</p>
+    <p><b>Rating</b> - The rating the student submitted with their feedback.</p>
+    <p><b>Priority</b> - The priority the student submitted assigned to their feedback.</p>
+    <p><b>Comments</b> - Shows any comments the student submitted with their feedback.</p>
+  <% end %>
+</div>
+<p><%= link_to 'Back', :back %></p>

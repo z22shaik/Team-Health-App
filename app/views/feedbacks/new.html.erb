@@ -1,0 +1,15 @@
+<h1>New Feedback</h1>
+
+<p>Please provide feedback on how well you believe your team performed this period using the dropdowns below.</p>
+    <li><u>Q1-Q4:</u> For each specific statement, select the option that best fits your team. </li>
+    <li><u>Urgency:</u> This field will determine the level of instructor intervention required. </li>
+<p>You may enter optional comments in the text area below with a maximum of 2048 characters. If you 
+   require further assistance, please click on the 'Help' tab (on the top right corner of this page) 
+   before submitting your feedback.
+</p><br>
+
+
+<%= render 'form', feedback: @feedback, user: @user, flag: false %>
+
+
+<%= link_to 'Back', :back %>
