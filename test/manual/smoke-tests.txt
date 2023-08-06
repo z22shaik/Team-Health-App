@@ -1,0 +1,126 @@
+T1: Valid login credentials for user
+Steps:
+1. Launch web app
+2. Enter valid email and valid password ("test@email.com", pw: "password")
+3. Click login
+Expected Results:
+Should login successfully and reach dashboard
+
+T2: Submitting a weekly feedback as user
+Steps:
+1. If Monday or Tuesday verify that student cannot submit feedbad  
+
+1. If not monday or tuesday Click on "Submit Feedback for { team_name} " 
+2. Fill out feedback accordingly 
+3. Select Submit 
+
+Expected Results:
+If Monday or Tuesday should not be able to submit feedback
+
+If not Monday or Tuesday should submit successfully 
+
+T3: Can view team health as user
+Steps:
+1. Click on "View Historical Data" on the dashboard next to the appropriate team
+Expected Results:
+Should be able to view team health on show page
+
+T4: Can logout as user
+Steps:
+1. After logging in, select logout on the top right corner
+Expected Results:
+Successfully logs out
+
+T5: Valid login credentials for Professor/TA
+Steps:
+1. Launch web app
+2. Enter valid email and password ("msmucker@gmail.com", pw: "professor")
+3. Click login
+Expected Results:
+Successfully logs in and reaches dashboard
+
+T6: Professor/TA create team functionality
+Steps:
+1. Launch web app
+2. Log in with Professor/TA email and pw
+3. Hover on "Manage Teams" tab and click the "New Team" or click on "Manage Teams" and click "New Team" on page
+4. Enter a name for the team
+5. Click "Create Team"
+6. Click "Back" to see new team on dashboard
+Expected Results:
+Should successfully create team and display new team on dashboard
+
+T7: Professor/TA edit team name functionality
+Steps:
+1. Launch web app
+2. Log in with Professor/TA email and pw
+3. Click on "Manage Teams" 
+4. Click on "Edit" next to the team that needs updating
+5. Change either team name or team code 
+6. Click on "Update Team"
+7. Click "Back" to see updated details on dashboard
+Expected Results:
+Should successfully update team details and display on dashboard
+
+T8: Professor accessing Show page for teams
+Steps:
+1. Launch web app
+2. Log in with Professor/TA email and pw
+3. Click on "Manage Teams"
+4. Click on "Show" next to a team
+Expected Results:
+Successfully view team details page
+
+T9: Professor accessing Show page for users
+Steps:
+1. Launch web app
+2. Log in with Professor/TA email and pw
+3. Click on "Manage Users"
+4. Click on "Show" next to a user
+Expected Results:
+Successfully view user details page
+
+T10: Feedback button visibility based on day
+Steps:
+1. Launch web app
+2. Log in with valid user email and pw
+3. If it is Monday or Tuesday, submit feedback button should be invisible. Otherwise, visible
+Expected Results:
+Successfully see button everyday but Monday and Tuesday
+
+T11: Instructors resetting password for users
+1. Launch web app 
+2. Log in with Professor/TA email and pw 
+3. Click on "Manage Users" 
+4. Click on a user’s name 
+5. Click on "Regenerate Password" button
+Expected Results:
+Should bring user back to home page and can now log in to the targeted user with correct email and newly generated password
+
+
+T12: Instructors can sort Users table by user names
+1. Launch web app 
+2. Log in with Professor/TA email and pw 
+3. Click on "Manage Users" 
+4. Click on "name" column to sort names
+Expected Results:
+Should see the order of user's names change alphabetically ascending when clicked once descending when clicked again
+
+
+T13: Instructors can sort Teams table by "Team Name"
+1. Launch web app 
+2. Log in with Professor/TA email and pw 
+3. Click on "Manage Teams" 
+4. Click on "Team Name" column to team names
+Expected Results:
+Should see the order of team names change alphabetically ascending when clicked once descending when clicked again
+
+
+T14: Instructors can sort Feedback & Ratings table by "Team Name" and "Urgency"
+1. Launch web app 
+2. Log in with Professor/TA email and pw 
+3. Click on "Feedback & Ratings " 
+4. Click on "Team Name" column to team names 
+5. Click on "Urgency" column to sort feedback by urgency
+Expected Results:
+Should see the order of feedback change based on team names being alphabetically ascending when clicked once descending when clicked again OR based on the urgency level
